@@ -1,0 +1,39 @@
+// Example program
+#include <iostream>
+#include <string>
+
+int main()
+{
+    const double pilsen = 8, ipa = 9, stout = 10; //beer types and prices
+    double quantity, beer, tax = 1.1, total; //variables to reach total price
+    std::string name;
+    
+    std::cout << ("Welcome to The Bold Brewing Co. What's your name? "); //client's name
+    std::cin >> name;
+    
+    std::cout << ("Hello, ") << name << ("!\nHow many beers would you like? "); //quantity input
+    std::cin >> quantity;
+        if (quantity < 1) {
+            std::cout << ("ERROR: Quantity invalid."); //wrong quantity input error message
+            return 0;
+        }
+    std::cout << ("Select your beer type\n(1) Pilsen, (2) IPA, (3) Stout: "); //beer type input
+    std::cin >> beer;
+        if (beer == 1) {
+            total = quantity * pilsen; //first beer type calculation
+        }
+        else if (beer == 2) {
+            total = quantity * ipa; //second beer type calculation
+        }
+        else if (beer == 3) {
+            total = quantity * stout; //third beer type calculation
+        }
+        else {
+            std::cout << ("ERROR: Beer type invalid."); //wrong beer input error message
+            return 0;
+        }
+        
+    std::cout << ("EFT POS Tax: $") << total * tax - total << ("\n"); //tax total
+    std::cout << ("Your total is $") << total * tax; //client's order price
+    return 0;
+}
