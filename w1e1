@@ -1,0 +1,20 @@
+// Example program
+#include <iostream>
+#include <string>
+
+int main()
+{
+const double feetCm = 30.48, inchesCm = 2.54; //constant multiplier
+double feet, inches; //variables to be inputed by client
+
+  std::cout << ("Type the length (feet): "); //call for the input
+  std::cin >> feet; //feet input to conversion
+  
+  std::cout << ("Type the length (inches): "); //call for the input
+  std::cin >> inches; //inches input to conversion
+  
+  std::cout << ("The conversion feet to cm is: ") << feet * feetCm << ("cm.\n"); //final result output
+  std::cout << ("The conversion inches to cm is: ") << inches * inchesCm << ("cm."); //final result output
+  
+  return 0;
+}
