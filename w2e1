@@ -1,0 +1,25 @@
+// Example program
+#include <iostream>
+#include <string>
+
+int main()
+{
+	double numberOne, numberTwo; //variables to be inputed by the user
+	double maxNumber; //highest number inputed
+
+	std::cout << ("Insert first value: "); //call for the first input
+	std::cin >> numberOne;
+
+	std::cout << ("Insert second value: "); //call for the second input
+	std::cin >> numberTwo;
+
+	if (numberOne > numberTwo) { //first input as max number
+		maxNumber = numberOne;
+	}
+	else if (numberTwo > numberOne) { //second input as max number
+		maxNumber = numberTwo;
+	}
+
+	std::cout << ("The highest value is ") << maxNumber; //max number declaration
+	return 0;
+}
