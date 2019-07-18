@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+	int a;
+
+	std::cout << ("Insert X value: ");
+	std::cin >> a;
+
+	a += 4;
+
+	std::cout << ("Now X is ") << a;
+	return 0;
+}
