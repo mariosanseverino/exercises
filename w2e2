@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main()
+{
+	double valueA, valueB; //declaration of the two variables
+	double newA, newB; //new variables value
+
+	std::cout << ("Insert value A: "); //A input
+	std::cin >> valueA;
+
+	std::cout << ("Insert value B: "); //B input
+	std::cin >> valueB;
+
+		newB = valueA; //exchange of values
+		newA = valueB;
+		valueA = newA;
+		valueB = newB;
+
+	std::cout << ("Now:\nA= ") << valueA; //final A result
+	std::cout << ("\nB= ") << valueB; //final B result
+
+	return 0;
+}
