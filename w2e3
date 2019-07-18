@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main()
+{
+	int day; //variable to each day of the week
+
+	std::cout << ("What day of the week is today? \nType 1-7 as monday-sunday: ");
+	std::cin >> day;
+
+	switch (day) {
+	case 1:
+		std::cout << ("On mondays we offer you free Pool Table!");
+		break;
+	case 2:
+		std::cout << ("On tuesdays we offer you free JukeBox!");
+		break;
+	case 3:
+		std::cout << ("On wednesdays we have happy hour from 4 to 6pm.");
+		break;
+	case 4:
+		std::cout << ("On thursdays we have half price burgers!");
+		break;
+	case 5:
+		std::cout << ("On fridays we have half price drinks from 4 to 6pm.");
+		break;
+	case 6:
+		std::cout << ("On saturdays we have $10 nachos!");
+		break;
+	case 7:
+		std::cout << ("On sundays we have $5 schooners all day!");
+		break;
+	default:
+		std::cout << ("Wrong day input.");
+	}
+}
