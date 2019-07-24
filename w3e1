@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main()
+{
+	double val1, val2; //variables to be inserted
+	std::cout << ("Please insert the first value: ");
+	std::cin >> val1;
+	std::cout << ("Please insert the second value: ");
+	std::cin >> val2;
+	if (val1 > 10 && val2 > 10) { //case in which both values are greater than 10
+		std::cout << ("The values inserted are ") << val1 << (" and ") << val2 << (".");
+	}
+	else if (val1 < 10 && val2 > 10) { //case in which the first value fails to be greater than 10
+		std::cout << ("ERROR: The first value inserted (") << val1 << (") is lesser than 10.");
+	}
+	else if (val1 > 10 && val2 < 10) { //case in which the second value fails to be greater than 10
+		std::cout << ("ERROR: The second value inserted (")<< val2 << (") is lesser than 10.");
+	}
+	else { //case in which both values fails to be greater than 10
+		std::cout << ("ERROR: Both values need to be greater than 10.");
+	}
+	return 0;
+}
