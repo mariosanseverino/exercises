@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main()
+{
+	double val1, val2; //variables to be inserted
+	std::cout << ("Please insert the first value: ");
+	std::cin >> val1;
+	std::cout << ("Please insert the second value: ");
+	std::cin >> val2;
+	if (val1 > 10 || val2 > 10) { //case in which any of the inputs were greater than 10
+		std::cout << ("The values (") << val1 << (") and (") << val2 << (") were accepted.");
+	}
+	else { //case in which both of the inputs were lesser than 10
+		std::cout << ("ERROR: Both values inserted are lesser than 10.");
+	}
+	return 0;
+}
