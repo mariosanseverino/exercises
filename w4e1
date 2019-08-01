@@ -35,7 +35,6 @@ int main() {
 	int sId = 3170, duration = 2;
 	std::string name = "Laura Sanseverino", course = "Software Development", cId = "SW19/1";
 	WIA_Student studentAccess(sId, duration, name, course, cId);
-	//studentAccess.setStudentDetails(sId, duration, name, course, cId);
 	studentAccess.studentDetails();
 	std::cout << studentAccess.getCourseDuration();
 	int updatedCourseDuration = studentAccess.getCourseDuration();
