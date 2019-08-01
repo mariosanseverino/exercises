@@ -1,0 +1,43 @@
+#include <iostream>
+
+class WIA_Student {
+public:
+	int studentId, courseDuration;
+	std::string studentName, studentCourse, courseId;
+	WIA_Student(int sId, int duration, std::string name, std::string course, std::string cId) {
+		studentId = sId;
+		studentName = name;
+		studentCourse = course;
+		courseId = cId;
+		courseDuration = ++duration;
+	}
+
+	void studentDetails()
+	{
+		std::cout << studentId<<std::endl << studentName<<std::endl << courseId<<std::endl << courseDuration <<std::endl;
+	}
+
+	void setStudentDetails(int sId, int duration, std::string name, std::string course, std::string cId)
+	{
+		studentId = sId;
+		studentName = name;
+		studentCourse = course;
+		courseId = cId;
+		courseDuration = ++duration;
+	}
+	int getCourseDuration() {
+		return courseDuration;
+	}
+	
+};
+
+int main() {
+	int sId = 3170, duration = 2;
+	std::string name = "Laura Sanseverino", course = "Software Development", cId = "SW19/1";
+	WIA_Student studentAccess(sId, duration, name, course, cId);
+	//studentAccess.setStudentDetails(sId, duration, name, course, cId);
+	studentAccess.studentDetails();
+	std::cout << studentAccess.getCourseDuration();
+	int updatedCourseDuration = studentAccess.getCourseDuration();
+	return 0;
+}
